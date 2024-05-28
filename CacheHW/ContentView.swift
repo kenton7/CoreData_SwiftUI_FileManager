@@ -41,16 +41,6 @@ struct ContentView: View {
             }
             .navigationTitle("Пользователи")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        CacheManager.shared.clearCache()
-                    }, label: {
-                        Image(systemName: "trash.circle.fill")
-                            .foregroundStyle(.red)
-                    })
-                }
-            }
         }
         .task {
             do {
